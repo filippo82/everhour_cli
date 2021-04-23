@@ -1,11 +1,12 @@
 # Simple Everhour CLI bassed Hour Reporting
-Version 1.0.0
+
+Version 1.0.1
 
 ## Getting started
 
 ### Install the requirements
 
-```
+```shell
 pip install -r requirements.txt
 ```
 
@@ -14,13 +15,13 @@ Add the folder to your $PATH variable
 ### Authenticate
 
 1. Rename the everhour.ini.example to everhour.ini
-2. Go to https://app.everhour.com/#/account/profile
+2. Go to [https://app.everhour.com/#/account/profile](https://app.everhour.com/#/account/profile)
 3. Copy the API Token into your clipboard
 4. Edit the everhour.ini file and replace the example token
 
 ### List recent time log entries of current user
 
-```
+```shell
 everhour log ls --limit 3
 ```
 
@@ -36,10 +37,9 @@ everhour log ls --limit 3
 ------------------------------------------------------------------------------------------------------------------
 ```
 
-
 ### List all Projects
 
-```
+```shell
 everhour projects ls
 ```
 
@@ -58,13 +58,11 @@ everhour projects ls
 
 ### List all Projects matching a string
 
-```
+```shell
 everhour projects ls product
 ```
 
-
-
-```
+```shell
 -----------------------------------------------------------------
 | Id                 | Name                                     |
 -----------------------------------------------------------------
@@ -75,7 +73,7 @@ everhour projects ls product
 
 ### List all tasks of projects
 
-```
+```shell
 everhour tasks ls 163263561971111
 ````
 
@@ -93,31 +91,31 @@ everhour tasks ls 163263561971111
 
 ### Log hours to a task today
 
-```
+```shell
 everhour log add --task 164347293111111 --hours 3
 ```
 
 ### Log hours to a task on yesterday
 
-```
+```shell
 everhour log add --task 164347293111111 --hours 3 --date yesterday
 ```
 
 ### Log hours to a task on monday
 
-```
+```shell
 everhour log add --task 164347293111111 --hours 3 --date mon
 ```
 
 ### Log hours to a task on a given day
 
-```
+```shell
 everhour log add --task 164347293111111 --hours 3 --date 2018-05-10
 ```
 
 ### Set hours to a task on a given day
 
-```
+```shell
 everhour log set --task 164347293111111 --hours 3 --date 2018-05-10
 ```
 
@@ -126,6 +124,5 @@ everhour log set --task 164347293111111 --hours 3 --date 2018-05-10
 - Create proper python package
 - Add caching for profile, project and task lookups
 - ...
-
 
 Enjoy!
